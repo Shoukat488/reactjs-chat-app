@@ -1,10 +1,9 @@
 import React from 'react';
-
-import ChatShell from './containers/shell/ChatShell';
+import Routes from './Routes';
 
 const App = () => {
   return (
-    <ChatShell />
+    <Routes />
   );
 }
 
