@@ -12,6 +12,22 @@ import ChatForm from '../../components/chat-form/ChatForm';
 
 import './ChatShell.scss';
 
+const mapStateToProps = state => {
+    return {
+        conversations: state.conversationState.conversations,
+        selectedConversation: state.conversationState.selectedConversation
+    };
+};
+  
+const mapDispatchToProps = dispatch => ({
+    conversationChanged: conversationId => dispatch(conversationChanged(conversationId)),
+    onMessageSubmitted: messageText => { dispatch(newMessageAdded(messageText)); },
+    onDeleteConversation: () => { dispatch(conversationDeleted()); },
+    loadConversations: () => { dispatch(conversationsRequested())}
+});
+
+
+
 const ChatShell = ({ 
     conversations, 
     selectedConversation, 
@@ -57,19 +73,6 @@ const ChatShell = ({
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        conversations: state.conversationState.conversations,
-        selectedConversation: state.conversationState.selectedConversation
-    };
-};
-  
-const mapDispatchToProps = dispatch => ({
-    conversationChanged: conversationId => dispatch(conversationChanged(conversationId)),
-    onMessageSubmitted: messageText => { dispatch(newMessageAdded(messageText)); },
-    onDeleteConversation: () => { dispatch(conversationDeleted()); },
-    loadConversations: () => { dispatch(conversationsRequested())}
-});
 
 export default connect(
     mapStateToProps,

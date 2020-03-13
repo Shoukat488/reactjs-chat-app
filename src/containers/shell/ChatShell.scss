@@ -16,4 +16,5 @@ $chat-shell-background: lighten($accent-color, 65%);
   height: 95vh;
   background: $chat-shell-background;
   border-radius: 10px;
+  box-shadow: 2px 2px 20px 10px rgb(59, 121, 64);
 }
