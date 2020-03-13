@@ -1,6 +1,6 @@
 @import '../../node_modules/compass-sass-mixins/lib/compass/utilities/color/_contrast.sass';
 
-$primary-color: #0048AA;
+$primary-color: #0B8E49;
 $accent-color: #EEE;
 
 $contrasted-primary-text: #FFF; // contrast-color($primary-color, lighten($accent-color, 10), darken($accent-color, 10));
@@ -15,5 +15,5 @@ $search-background-image-color: #ffffff4d;
 $light-grey-border: #DDD;
 $accent-text-color: darken($accent-color, 86.67);
 
-$sky-blue: #57c1eb;
-$sky-dark-blue: #246fa8;
+$sky-blue: rgb(42, 187, 110);
+$sky-dark-blue: rgb(9, 139, 70);
